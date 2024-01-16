@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("demo");
+                let captionText = document.getElementById("caption");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>
+
+        <style>
+            nav.navbar { /* More specific selector */
+                font-family: 'Comic Sans MS';
+                font-size: 16px;
+                font-weight: bold;
+                color: #000000;
+                background-color: black;
+            }
+
+            body {
+                font-family: 'Comic Sans MS';
+                font-weight: bold;
+                color: #000000;
+                background-color: cornsilk;
+            }
+
+            .dropdown-menu {
+                display: none; /* Hide initially */
+                position: absolute;
+                background-color: white;
+                border: 1px solid black;
+                padding: 10px;
+                z-index: 1; /* Ensure it appears above other elements */
+            }
+
+            .dropdown-menu li a {
+                /* Same styles as main links */
+            }
+
+            /* Show dropdown menu on hover */
+            .dropdown:hover .dropdown-menu {
+                display: block;
+
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            img {
+                vertical-align: ;
+            }
+
+            /* Position the image container (needed to position the left and right arrows) */
+            .container {
+                position: relative;
+
+            }
+
+            /* Hide the images by default */
+            .mySlides {
+                display: none;
+                border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+                border: 4px solid black;
+            }
+
+            /* Add a pointer when hovering over the thumbnail images */
+            .cursor {
+                cursor: pointer;
+            }
+
+            /* Next & previous buttons */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 40%;
+                width: auto;
+                padding: 8px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            /* Container for image text */
+            .caption-container {
+                text-align: center;
+                background-color: #222;
+                padding: 2px 16px;
+                color: white;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Six columns side by side */
+            .column {
+                float: left;
+                width: 16.66%;
+            }
+
+            /* Add a transparency effect for thumnbail images */
+            .demo {
+                opacity: 0.6;
+            }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+            footer {
+                text-align: center;
+                padding: 3px;
+                background-color: black;
+                color: white;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"> &#127822; Y U M M Y &nbsp; F O O D I E &#127822; </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#">RECIPE FINDER</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dessert.html">Dessert</a></li>
+                            <li><a href="dinner.html">Dinner</a></li>
+                            <li><a href="lunch.html">Lunch</a></li>
+                            <li><a href="Breakfast.html">Breakfast</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="PopularRecipe.html">POPULAR RECIPES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="5Stars.html">5 stars</a></li>
+                            <li><a href="Trending.html">Trending</a></li>
+                            <li><a href="PopularRecipe.html">Recently added recipe</a></li>
+                            <li><a href="Editor.html">Editor's choice</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="RecipeSubmission.html">RECIPE SUBMISSION</a></li>
+                    <li><a href="AboutUs.html">ABOUT US</a></li>
+                    <li><a href="ContactUs.html">CONTACT</a></li>    
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+        <h1 style="text-align:center" >HELLO! WELCOME TO YUMMY FOODIE</h1>
+        <h2 style="text-align:center"> &#127833; Let's cook with confidence ! &#127833; </h2>
+
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="food1.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="food2.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="food3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="food4.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="food5.jpeg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="food6.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="food1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="HOMEMADE PIZZA">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="food2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="HOMEMADE BURGER">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="food3.jpg" style="width:100%" onclick="currentSlide(3)" alt="STRAWBERRY PUDDING">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="food4.jpeg" style="width:100%" onclick="currentSlide(4)" alt=" HOMEMADE SUBWAY BREAD ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="food5.jpeg" style="width:100%" onclick="currentSlide(5)" alt="CHOCOLATE CAKE">
+                </div>    
+                <div class="column">
+                    <img class="demo cursor" src="food6.jpg" style="width:100%" onclick="currentSlide(6)" alt="PRAWN TOMYAM ">
+                </div>
+            </div>
+        </div>
+        <div><h1 style='padding:1em;'></h1></div>     
+        <div class="container">    
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">NASI KERABU</div>
+                        <div class="panel-body"><img src=nasikerabu.jpg class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer">Nasi kerabu is a traditional dish of the northeastern coast of West Malaysia, primarily in the states of Kelantan and Terrenganu, from where it spreads to the other regions of the country by the beginning of the 21st century, as well as to neighbouring Singapore.
+                            This dish is also very popular in the adjacent regions of southern Thailand, populated mainly by Malays, among whom there are separatist sentiments. Due to the latter circumstance, nasi kerabu is often perceived in this area not only as the most important culinary speciality, but also as one of the informal symbols of ethnic identity and connection with Malaysia.</div>
+                    </div>
+                </div>
+                <div class="col-sm-4"> 
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">NASI DAGANG</div>
+                        <div class="panel-body"><img src=nasidagang.jpg class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer">Outside the Malaysian border, it is a staple breakfast in the deep south of Thailand (Pattani, Yala and Narathiwat), the nasi dagang of southern Thailand features both Kelantanese (red) and Terengganuan (white) version of the dish. While across the South China Sea, the Nasi dagang in Natuna & Anambas attributed a similar gurai (gravy) with the Terangganese version of the rice, although the rice for the Natuna-Anambas version of Nasi Dagang was cooked with coconut milk, closely related to Nasi Lemak. &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</div>
+                    </div>
+                </div>
+                <div class="col-sm-4"> 
+                    <div class="panel panel-success">
+                        <div class="panel-heading">NASI LEMAK</div>
+                        <div class="panel-body"><img src=nasilemak.jpg class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer">Nasi lemak is a dish originating in Malay cuisine that consists of fragrant rice cooked in coconut milk and pandan leaf. It is commonly found in Malaysia, where it is considered as the national dish.It is also a native dish in neighbouring areas with significant ethnic Malay populations such as Singapore and Southern Thailand. In Indonesia it can be found in several parts of Sumatra, especially the Malay regions of Riau, Riau Islands and Medan. It is considered an essential dish for a typical Malay-style breakfast. Nasi lemak is featured as a national dish in most of the country's tourism brochures and promotional materials.</div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="container">    
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">STEAK</div>
+                        <div class="panel-body"><img src=steak.jpg class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer"> <ul>
+                <li>Ribeye: The marbled marvel, bursting with rich flavor.</li>
+                <li>New York Strip: A classic for a reason, boasting a tender bite and satisfying chew.</li>
+                <li>Filet Mignon: The epitome of tenderness, melting in your mouth with each decadent slice.</li>
+                <li>Porterhouse: The grand feast, offering two distinct cuts for the ultimate indulgence.</li>
+                 <li>Garlic: A savory symphony for the senses.</li>
+                <li>Herbs: Fresh rosemary, thyme, or parsley create a fragrant symphony.</li>
+                <li>Spices: Dial up the heat with a fiery cayenne or smoky paprika.</li>
+                <li>Butter: A touch of richness to elevate the experience.&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</li>
+            </ul></div>
+                    </div>
+                </div>
+                <div class="col-sm-4"> 
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">CHICKEN SALAD</div>
+                        <div class="panel-body"><img src=chickensalad.jpg class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer"><ul>
+                <li>Rotisserie chicken: Effortless and flavorful.</li>
+                <li>Poached chicken breasts: Tender and light.</li>
+                <li>Grilled chicken: Infused with smoky goodness.</li>
+                <li>Salt and pepper: The classics.</li>
+                <li>Dill: Fresh and herbaceous.</li>
+                <li>Lemon juice: Bright and zesty.</li>
+                <li>Paprika: A touch of smoky spice.</li>
+                 <li>Grapes: Sweet and juicy bursts.</li>
+                <li>Chopped nuts: Nutty crunch in every bite.</li>
+                <li>Dried cranberries: Tangy and chewy surprises.</li>
+                <li>Apples: A refreshing touch of sweetness.&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</li>
+            </ul></div>
+                    </div>
+                </div>
+                <div class="col-sm-4"> 
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">APPLE PIE</div>
+                        <div class="panel-body"><img src=applepie.jpg class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-footer"><ul>
+            <li>2 cups all-purpose flour</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1/2 cup cold unsalted butter, cubed</li>
+            <li>1/4 cup ice water</li>
+            <li>(Optional) 1 tablespoon sugar
+                 <li>6-8 apples, peeled, cored, and sliced (Granny Smith, Honeycrisp, or Braeburn recommended)</li>
+            <li>1/2 cup granulated sugar</li>
+            <li>1/4 cup brown sugar</li>
+            <li>2 tablespoons cornstarch</li>
+            <li>1/4 teaspoon ground cinnamon</li>
+            <li>1/8 teaspoon ground nutmeg</li>
+            <li>1 tablespoon lemon juice </li>
+             <li>1/4 cup chopped walnuts or pecans (optional)</li>
+            <li>1 tablespoon brandy or Calvados (optional)</li>
+            <li>1/4 teaspoon ground ginger (optional)</li>
+            <li>Pinch of allspice (optional)</li>
+            <li>Egg wash for glaze (1 egg yolk beaten with 1 tablespoon milk)
+        </ul></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div><br><br>
+         <div><h1 style='padding:1em;'></h1></div> 
+        <footer>
+            <p>&copy; 2023 Yummy Foodie</p>
+            <p>Follow us: <a href="ContactUs.html">Facebook</a> | <a href="ContactUs.html">Instagram</a> |<a href="ContactUs.html">Whatsapps</a> | <a href="ContactUs.html">Twitter</a></p>
+        </footer>
+
+    </body>
+</html>

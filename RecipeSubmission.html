@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+     nav.navbar { /* More specific selector */
+    font-family: 'Comic Sans MS';
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+                    background-color: black;
+}
+
+body {
+   font-family: 'Comic Sans MS';
+   font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    background-color: cornsilk;
+       
+       
+    
+}
+
+            .dropdown-menu {
+                display: none; /* Hide initially */
+                position: absolute;
+                background-color: white;
+                border: 1px solid black;
+                padding: 10px;
+                z-index: 1; /* Ensure it appears above other elements */
+            }
+
+            .dropdown-menu li a {
+                /* Same styles as main links */
+            }
+
+            /* Show dropdown menu on hover */
+            .dropdown:hover .dropdown-menu {
+                display: block;
+
+            }
+
+
+    .container {
+      display: flex;
+      width: 75%; /* Adjust width as needed */
+      margin-left: 10px;
+    }
+
+    .form-section {
+      width: 75%; /* Adjust width as needed */
+    }
+
+    .submission-form {
+      background-color: orange;
+      padding: 30px;
+      border-radius: 10px;
+      /* Cute border effects */
+  border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+     
+    }
+
+    .form-title {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-input {
+      margin-bottom: 15px;
+      
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+      
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none; /* Prevent resizing of submission textarea */
+      /* Cute border effects */
+  border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+    }
+
+    .textarea-field {
+      height: 200px; /* Larger textarea for submission */
+    }
+
+    .submit-button {
+      background-color: cornsilk;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      /* Cute border effects */
+  border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+    }
+
+    .success-message {
+      text-align: center;
+      font-weight: bold;
+      color: black;
+      display: none; /* Initially hidden */
+    }
+
+    .video-list {
+      width: 40%; /* Adjust width as needed */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 20px;
+      
+    }
+
+    .video-item {
+      margin-bottom: 20px;
+    }
+
+    .video-item iframe {
+      width: 200%;
+      height: 272px; /* Adjust video height as needed */
+      /* Cute border effects */
+  border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+  
+    }
+    footer {
+            text-align: center;
+            padding: 3px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
+</head>
+<body>
+    
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"> &#127822; Y U M M Y &nbsp; F O O D I E &#127822; </a>
+    </div>
+    <ul class="nav navbar-nav">
+         <li><a href="index.html">HOME</a></li>
+      <li class="dropdown">
+                      <a href="#">RECIPE FINDER</a> 
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Dessert</a></li>
+                            <li><a href="#">Dinner</a></li>
+                            <li><a href="#">Lunch</a></li>
+                            <li><a href="#">Breakfast</a></li>
+                        </ul>
+                    </li>
+
+      
+                        <li class="dropdown">
+                        <a href="PopularRecipe.html">POPULAR RECIPES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="5Stars.html">5 stars</a></li>
+                            <li><a href="Trending.html">Trending</a></li>
+                            <li><a href="PopularRecipe.html">Recently added recipe</a></li>
+                            <li><a href="Editor.html">Editor's choice</a></li>
+                        </ul>
+                    </li>
+
+      <li class="active"><a href="RecipeSubmission.html">RECIPE SUBMISSION</a></li>
+       <li><a href="AboutUs.html">ABOUT US</a></li>
+       <li><a href="ContactUs.html">CONTACT</a></li>    
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+         </form>
+  </div>
+</nav>
+   
+    <div> <h1  style='text-align: center;'> &#127822;Share Your Culinary Creations with Our Foodie Community!&#127822; </h1> </div>
+    <div><h1 style='padding:1em;' ></h1>
+</div>    
+  <div  class="container">
+    <div class="form-section">
+      <div class="submission-form">
+        <h2 style=' font-weight: bold;' class="form-title">SHARE YOUR DELICIOUS RECIPE </h2>
+        <form id="recipe-form">
+          <div class="form-input">
+            <label class="form-label" for="recipe-title">Recipe Title:</label>
+            <input type="text" id="recipe-title" class="input-field" required>
+          </div>
+          <div class="form-input">
+            <label class="form-label" for="email-address">Your Email:</label>
+            <input type="email" id="email-address" class="input-field" required>
+          </div>
+          <div class="form-input">
+            <label class="form-label" for="recipe-details">Recipe Details:</label>
+            <textarea id="recipe-details" class="input-field textarea-field" rows="10" required></textarea>
+          </div>
+          <button type="submit" class="submit-button" >Submit Recipe</button>
+          <p class="success-message">Recipe submitted successfully! Thank you for sharing your recipe with us!</p>
+        </form>
+      </div>
+    </div>
+     
+    <div class="video-list">
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/qvQU1gykSHc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/zyE1wLq42Hg" frameborder="0" allowfullscreen></iframe>
+      </div>
+           <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/1iaKA_9oSsg" frameborder="0" allowfullscreen></iframe>
+      </div>
+         <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/PfEx-qzioRA" frameborder="0" allowfullscreen></iframe>
+      </div>
+           <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/0oGO07XhV6Q" frameborder="0" allowfullscreen></iframe>
+      </div>
+        <div> <h1 style='padding: 1em;'></h1></div>
+       
+<script>
+    const recipeForm = document.getElementById("recipe-form");
+    recipeForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Show success message (replace with actual submission logic if needed)
+      const successMessage = document.querySelector(".success-message");
+      successMessage.style.display = "block";
+
+      // Reset form after a delay (optional)
+      setTimeout(function() {
+        recipeForm.reset();
+        successMessage.style.display = "none";
+      }, 5000); // Delay in milliseconds
+    });
+  
+  </script>
+  </div>
+</div>
+           <footer>
+            <p>&copy; 2023 Yummy Foodie</p>
+            <p>Follow us: <a href="ContactUs.html">Facebook</a> | <a href="ContactUs.html">Instagram</a> |<a href="ContactUs.html">Whatsapps</a> | <a href="ContactUs.html">Twitter</a></p>
+        </footer>
+
+</body>
+</html>

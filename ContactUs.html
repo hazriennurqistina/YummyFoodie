@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Comic Sans MS';
+                font-size: 16px;
+                background-color: cornsilk;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: black;
+                padding: 0px;
+                text-align: center;
+            }
+
+            nav.navbar {
+                font-family: 'Comic Sans MS';
+                font-size: 16px;
+                font-weight: bold;
+                color: #000000;
+                background-color: black;
+                margin-bottom: 0;
+            }
+
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: white;
+                border: 1px solid black;
+                padding: 10px;
+                z-index: 1;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+
+            nav > li > a {
+                float: left;
+                width: 30%;
+                background: #ffcc99;
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 10px;
+            }
+
+            .content-container {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                margin-top: 20px;
+                
+            }
+
+            .content {
+                flex: 1;
+                background-color: orange;
+                text-align: center;
+                padding: 20px;
+                margin-right: 10px; /* Adjusted margin */
+                border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+            }
+
+            .email-form {
+                flex: 1;
+                background-color: orange;
+                padding: 20px;
+                margin-left: 10px; /* Adjusted margin */
+                border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            footer {
+                text-align: center;
+                padding: 3px;
+                background-color: black;
+                color: white;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            /* Adjusted style for the textarea */
+            textarea {
+                width: 100%;
+                height: 150px;
+                padding: 10px;
+                margin: 5px 0 10px 0;
+                box-sizing: border-box;
+                resize: none;
+                border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+            }
+
+            /* Adjusted style for the form inputs */
+            form input {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0;
+                box-sizing: border-box;
+                border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+            }
+
+            .submit-button {
+                background-color: cornsilk;
+                color: black;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                border-image: linear-gradient(to right, black,black,black) 1;  /* Gradient border */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);  /* Soft shadow */
+  border: 4px solid black;
+            }
+
+            .success-message {
+                text-align: center;
+                font-weight: bold;
+                color: black;
+                display: none; /* Initially hidden */
+            }
+            
+            
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" > &#127822; Y U M M Y &nbsp; F O O D I E &#127822; </a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li ><a href="index.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#">RECIPE FINDER</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="dessert.html">Dessert</a></li>
+                            <li><a href="dinner.html">Dinner</a></li>
+                            <li><a href="lunch.html">Lunch</a></li>
+                            <li><a href="Breakfast.html">Breakfast</a></li>
+                        </ul>
+                    </li>
+
+                     <li class="dropdown">
+                        <a href="PopularRecipe.html">POPULAR RECIPES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="5Stars.html">5 stars</a></li>
+                            <li><a href="Trending.html">Trending</a></li>
+                            <li><a href="PopularRecipe.html">Recently added recipe</a></li>
+                            <li><a href="Editor.html">Editor's choice</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="RecipeSubmission.html">RECIPE SUBMISSION</a></li>
+                        <li> <a href="AboutUs.html">ABOUT US</a></li>
+                        <li class="active"><a href="ContactUs.html">CONTACT</a></li> 
+                    </ul>
+                    <form class="navbar-form navbar-left" action="/action_page.php">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content-container">
+            <div class="content">
+                <p style='font-weight: bold; font-size: 20px;'>IF YOU WOULD LIKE TO WORK WITH US OR SIMPLY WANT TO DROP US FAN MAIL</p>
+                <a href="#Answer16">&nbsp;</a>
+                <p style='font-weight: bold; font-size: 20px;'>PLEASE SUBMIT YOUR EMAIL USING THE FORM BELOW, AND WE'LL GET BACK TO YOU AS SOON AS POSSIBLE</p>
+                 <a href="#Answer16">&nbsp;</a>
+                <p style='font-weight: bold; font-size: 20px;'>THANK YOU AND HAVE A GREAT DAY !!!</p>
+                <a href="#Answer16">&nbsp;</a>
+                <p style='font-weight: bold; font-size: 20px;'>FACEBOOK: YUMMYFOODIE</p>
+                <p style='font-weight: bold; font-size: 20px;'>INSTAGRAM:YUMMYFOODIE</p>
+                  <p style='font-weight: bold; font-size: 20px;'>WHATSAPPS:018-8297659</p>
+                    <p style='font-weight: bold; font-size: 20px;'>TWITTER:YUMMYFOODIE</p>
+                <a href="#Answer16">&nbsp;</a>
+            </div>
+
+            <div class="email-form">
+            <form id="email-form">
+                <label for="message">MESSAGE:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <label for="fname">NAME:</label><br>
+                <input type="text" id="fname" name="fname" required><br>
+                <label for="email">EMAIL:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <button type="submit" class="submit-button">SUBMIT</button>
+                <p class="success-message">Message successfully sent!</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const emailForm = document.getElementById("email-form");
+            
+            emailForm.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                // Show success message (replace with actual submission logic if needed)
+                const successMessage = document.querySelector(".success-message");
+                successMessage.style.display = "block";
+                
+                // Reset form after a delay (optional)
+                setTimeout(function () {
+                    emailForm.reset();
+                    successMessage.style.display = "none";
+                }, 5000); // Delay in milliseconds
+            });
+        });
+    </script>
+        <footer>
+            <p>&copy; 2023 Yummy Foodie</p>
+            <p>Follow us: <a href="ContactUs.html">Facebook</a> | <a href="ContactUs.html">Instagram</a> |<a href="ContactUs.html">Whatsapps</a> | <a href="ContactUs.html">Twitter</a></p>
+        </footer>
+    </body>
+</html>
